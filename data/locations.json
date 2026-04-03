@@ -1,0 +1,142 @@
+[
+  {
+    "id": "bheemuni-kolanu",
+    "name": "Bheemuni Kolanu Waterfall",
+    "city": "Nandyal",
+    "state": "Andhra Pradesh",
+    "country": "India",
+    "countryCode": "IN",
+    "description": "A breathtaking seasonal waterfall hidden deep in the Eastern Ghats. Bheemuni Kolanu plunges through a dramatic rocky gorge surrounded by dense forest canopy, creating misty pools that reflect the emerald green hills. A pristine wilderness escape rarely visited by tourists.",
+    "category": "adventure",
+    "coordinates": {
+      "lat": 15.4700,
+      "lng": 78.5000
+    },
+    "thumbnail": "/thumbnails/bheemuni-kolanu.jpg",
+    "tourUrl": "/tours/india/andhra-pradesh/nandyal/bheemuni-kolanu/Bheemuni_Kolanu_Tour.html",
+    "affiliate": {
+      "hotel": "https://www.makemytrip.com/hotels/nandyal-hotels.html",
+      "experience": "https://www.booking.com/region/in/nandyal.html"
+    }
+  },
+  {
+    "id": "billa-surgam-caves",
+    "name": "Billa Surgam Caves",
+    "city": "Bethamcherla",
+    "state": "Andhra Pradesh",
+    "country": "India",
+    "countryCode": "IN",
+    "description": "An ancient network of limestone caves stretching over 3 km underground near Bethamcherla. The caves feature remarkable stalactites, stalagmites, and crystal formations sculpted over millions of years. A cathedral-like inner chamber with a natural acoustic echo makes this one of India's most dramatic cave systems.",
+    "category": "unexplored",
+    "coordinates": {
+      "lat": 15.4500,
+      "lng": 78.1500
+    },
+    "thumbnail": "/thumbnails/billa-surgam-caves.png",
+    "tourUrl": "/tours/india/andhra-pradesh/kurnool/billa-surgam-caves/Billa_Surgam_Caves.html",
+    "affiliate": {
+      "hotel": "https://www.makemytrip.com/hotels/kurnool-hotels.html",
+      "experience": "https://www.booking.com/region/in/kurnool.html"
+    }
+  },
+  {
+    "id": "mallela-teertham",
+    "name": "Mallela Teertham Waterfall",
+    "city": "Chelama",
+    "state": "Andhra Pradesh",
+    "country": "India",
+    "countryCode": "IN",
+    "description": "One of Andhra Pradesh's most spectacular waterfalls, Mallela Teertham cascades 150 feet into a sacred pool nestled in the Nallamala forest reserve. The waterfall is believed to be the bathing spot of the sage Agastya, adding spiritual significance to its natural beauty.",
+    "category": "adventure",
+    "coordinates": {
+      "lat": 15.5833,
+      "lng": 78.5167
+    },
+    "thumbnail": "/thumbnails/mallela-teertham.jpg",
+    "tourUrl": "/tours/india/andhra-pradesh/kurnool/mallela-teertham/Mallela_Teertham.html",
+    "affiliate": {
+      "hotel": "https://www.makemytrip.com/hotels/nandyal-hotels.html",
+      "experience": "https://www.booking.com/region/in/kurnool.html"
+    }
+  },
+  {
+    "id": "old-papanasanam",
+    "name": "Old Papanasanam",
+    "city": "Nandyal",
+    "state": "Andhra Pradesh",
+    "country": "India",
+    "countryCode": "IN",
+    "description": "An ancient pilgrimage site perched above the Papagni River where devotees have sought absolution for centuries. The old temple complex features medieval-era inscriptions and architecture set against a dramatic hillside landscape. The site holds profound spiritual significance in the Shaiva tradition.",
+    "category": "pilgrimages",
+    "coordinates": {
+      "lat": 15.5667,
+      "lng": 78.4833
+    },
+    "thumbnail": "/thumbnails/old-papanasanam.jpg",
+    "tourUrl": "/tours/india/andhra-pradesh/nandyal/old-papanasanam/Old_Papanasanam_Tour.html",
+    "affiliate": {
+      "hotel": "https://www.makemytrip.com/hotels/nandyal-hotels.html",
+      "experience": "https://www.booking.com/region/in/nandyal.html"
+    }
+  },
+  {
+    "id": "talakona-waterfalls",
+    "name": "Talakona Waterfalls",
+    "city": "Tirupati",
+    "state": "Andhra Pradesh",
+    "country": "India",
+    "countryCode": "IN",
+    "description": "The highest waterfall in Andhra Pradesh at 270 feet, Talakona falls inside the Sri Venkateswara National Park. The waterfall is surrounded by a dense biodiversity-rich forest home to leopards, deer and rare medicinal plants. The Sri Siddheswara Swamy temple at its base adds a sacred dimension to this natural wonder.",
+    "category": "adventure",
+    "coordinates": {
+      "lat": 13.6103,
+      "lng": 79.3825
+    },
+    "thumbnail": "/thumbnails/talakona-waterfalls.jpg",
+    "tourUrl": "/tours/india/andhra-pradesh/chittoor/talakona-waterfalls/Talakona_Waterfalls_Tour.html",
+    "affiliate": {
+      "hotel": "https://www.makemytrip.com/hotels/tirupati-hotels.html",
+      "experience": "https://www.booking.com/region/in/tirupati.html"
+    }
+  },
+  {
+    "id": "tirumala-valley",
+    "name": "Tirumala Valley",
+    "city": "Tirupati",
+    "state": "Andhra Pradesh",
+    "country": "India",
+    "countryCode": "IN",
+    "description": "The sacred valley surrounding the world's most visited religious site — Sri Venkateswara Temple on Tirumala Hill. Rolling forested hills, ancient ghats, and the spiritual energy of millions of pilgrims create an atmosphere unlike anywhere else on Earth. The panoramic valley views from the hilltop are nothing short of divine.",
+    "category": "pilgrimages",
+    "coordinates": {
+      "lat": 13.6833,
+      "lng": 79.3500
+    },
+    "thumbnail": "/thumbnails/tirumala-valley.jpg",
+    "tourUrl": "/tours/india/andhra-pradesh/tirupati/tirumala-valley/Tirumala_Valley_Tour.html",
+    "affiliate": {
+      "hotel": "https://www.makemytrip.com/hotels/tirupati-hotels.html",
+      "experience": "https://www.booking.com/region/in/tirupati.html"
+    }
+  },
+  {
+    "id": "tumburu-teertham",
+    "name": "Tumburu Teertham",
+    "city": "Nandyal",
+    "state": "Andhra Pradesh",
+    "country": "India",
+    "countryCode": "IN",
+    "description": "A revered forest shrine deep in the Nallamala hills, dedicated to the celestial musician Tumburu from Hindu mythology. A sacred waterfall feeds the teertham pool where pilgrims bathe for blessings. The dense forest setting with towering trees and birdsong creates an atmosphere of profound peace and ancient devotion.",
+    "category": "places of worship",
+    "coordinates": {
+      "lat": 15.5250,
+      "lng": 78.5500
+    },
+    "thumbnail": "/thumbnails/tumburu-teertham.jpg",
+    "tourUrl": "/tours/india/andhra-pradesh/kurnool/tumburu-teertham/Tumburu_Teertham.html",
+    "affiliate": {
+      "hotel": "https://www.makemytrip.com/hotels/nandyal-hotels.html",
+      "experience": "https://www.booking.com/region/in/nandyal.html"
+    }
+  }
+]
