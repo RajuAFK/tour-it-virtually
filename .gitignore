@@ -13,3 +13,6 @@ coverage/
 *.tsbuildinfo
 .DS_Store
 Thumbs.db
+
+# Virtual tour files — served from Cloudflare R2, not the repo
+public/tours/

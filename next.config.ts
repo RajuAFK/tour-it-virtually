@@ -11,19 +11,13 @@ const nextConfig: NextConfig = {
         protocol: 'https',
         hostname: 'raw.githubusercontent.com',
       },
+      // Cloudflare R2 public bucket — replace with your actual R2 public domain
+      // e.g. pub-xxxxxxxx.r2.dev  OR  your custom domain like tours.yourdomain.com
+      // {
+      //   protocol: 'https',
+      //   hostname: 'REPLACE_WITH_R2_HOSTNAME',
+      // },
     ],
-  },
-  // Allow cross-origin for pano2vr player scripts
-  async headers() {
-    return [
-      {
-        source: '/tours/:path*',
-        headers: [
-          { key: 'Cross-Origin-Embedder-Policy', value: 'unsafe-none' },
-          { key: 'Cross-Origin-Opener-Policy', value: 'same-origin-allow-popups' },
-        ],
-      },
-    ]
   },
 }
 

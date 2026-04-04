@@ -13,7 +13,7 @@
       "lng": 78.5000
     },
     "thumbnail": "/thumbnails/bheemuni-kolanu.jpg",
-    "tourUrl": "/tours/india/andhra-pradesh/nandyal/bheemuni-kolanu/Bheemuni_Kolanu_Tour.html",
+    "tourUrl": "https://REPLACE_WITH_R2_URL/tours/india/andhra-pradesh/nandyal/bheemuni-kolanu/Bheemuni_Kolanu_Tour.html",
     "affiliate": {
       "hotel": "https://www.makemytrip.com/hotels/nandyal-hotels.html",
       "experience": "https://www.booking.com/region/in/nandyal.html"
@@ -33,7 +33,7 @@
       "lng": 78.1500
     },
     "thumbnail": "/thumbnails/billa-surgam-caves.png",
-    "tourUrl": "/tours/india/andhra-pradesh/kurnool/billa-surgam-caves/Billa_Surgam_Caves.html",
+    "tourUrl": "https://REPLACE_WITH_R2_URL/tours/india/andhra-pradesh/kurnool/billa-surgam-caves/Billa_Surgam_Caves.html",
     "affiliate": {
       "hotel": "https://www.makemytrip.com/hotels/kurnool-hotels.html",
       "experience": "https://www.booking.com/region/in/kurnool.html"
@@ -53,7 +53,7 @@
       "lng": 78.5167
     },
     "thumbnail": "/thumbnails/mallela-teertham.jpg",
-    "tourUrl": "/tours/india/andhra-pradesh/kurnool/mallela-teertham/Mallela_Teertham.html",
+    "tourUrl": "https://REPLACE_WITH_R2_URL/tours/india/andhra-pradesh/kurnool/mallela-teertham/Mallela_Teertham.html",
     "affiliate": {
       "hotel": "https://www.makemytrip.com/hotels/nandyal-hotels.html",
       "experience": "https://www.booking.com/region/in/kurnool.html"
@@ -73,7 +73,7 @@
       "lng": 78.4833
     },
     "thumbnail": "/thumbnails/old-papanasanam.jpg",
-    "tourUrl": "/tours/india/andhra-pradesh/nandyal/old-papanasanam/Old_Papanasanam_Tour.html",
+    "tourUrl": "https://REPLACE_WITH_R2_URL/tours/india/andhra-pradesh/nandyal/old-papanasanam/Old_Papanasanam_Tour.html",
     "affiliate": {
       "hotel": "https://www.makemytrip.com/hotels/nandyal-hotels.html",
       "experience": "https://www.booking.com/region/in/nandyal.html"
@@ -93,7 +93,7 @@
       "lng": 79.3825
     },
     "thumbnail": "/thumbnails/talakona-waterfalls.jpg",
-    "tourUrl": "/tours/india/andhra-pradesh/chittoor/talakona-waterfalls/Talakona_Waterfalls_Tour.html",
+    "tourUrl": "https://REPLACE_WITH_R2_URL/tours/india/andhra-pradesh/chittoor/talakona-waterfalls/Talakona_Waterfalls_Tour.html",
     "affiliate": {
       "hotel": "https://www.makemytrip.com/hotels/tirupati-hotels.html",
       "experience": "https://www.booking.com/region/in/tirupati.html"
@@ -113,7 +113,7 @@
       "lng": 79.3500
     },
     "thumbnail": "/thumbnails/tirumala-valley.jpg",
-    "tourUrl": "/tours/india/andhra-pradesh/tirupati/tirumala-valley/Tirumala_Valley_Tour.html",
+    "tourUrl": "https://REPLACE_WITH_R2_URL/tours/india/andhra-pradesh/tirupati/tirumala-valley/Tirumala_Valley_Tour.html",
     "affiliate": {
       "hotel": "https://www.makemytrip.com/hotels/tirupati-hotels.html",
       "experience": "https://www.booking.com/region/in/tirupati.html"
@@ -133,7 +133,7 @@
       "lng": 78.5500
     },
     "thumbnail": "/thumbnails/tumburu-teertham.jpg",
-    "tourUrl": "/tours/india/andhra-pradesh/kurnool/tumburu-teertham/Tumburu_Teertham.html",
+    "tourUrl": "https://REPLACE_WITH_R2_URL/tours/india/andhra-pradesh/kurnool/tumburu-teertham/Tumburu_Teertham.html",
     "affiliate": {
       "hotel": "https://www.makemytrip.com/hotels/nandyal-hotels.html",
       "experience": "https://www.booking.com/region/in/nandyal.html"
