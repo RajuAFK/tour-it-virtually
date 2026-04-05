@@ -1,5 +1,6 @@
 'use client'
 
+import type { ReactNode } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 
@@ -8,50 +9,53 @@ export default function Navbar() {
 
   return (
     <nav
-      className="absolute top-0 left-0 right-0 z-30 flex items-center justify-between px-6 py-4"
+      className="absolute top-0 left-0 right-0 z-30 flex items-center justify-between px-4 py-4 md:px-6"
       style={{
         background: 'linear-gradient(to bottom, rgba(10,10,20,0.7) 0%, transparent 100%)',
       }}
     >
-      {/* Logo */}
       <Link href="/earth" className="flex items-center gap-2 group">
         <div
-          className="w-8 h-8 rounded-lg flex items-center justify-center text-white text-sm font-bold"
+          className="flex h-8 w-8 items-center justify-center rounded-lg text-sm font-bold text-white"
           style={{ background: 'linear-gradient(135deg, #0ea5e9, #6366f1)' }}
         >
           T
         </div>
-        <span className="text-white font-semibold text-sm tracking-wide group-hover:text-sky-300 transition-colors">
+        <span className="text-sm font-semibold tracking-wide text-white transition-colors group-hover:text-sky-300">
           TourItVirtually
         </span>
       </Link>
 
-      {/* Nav links — no outer pill wrapper, only the active link gets a pill */}
-      <div className="flex items-center gap-1">
+      <div
+        className="flex items-center gap-1 rounded-full p-1"
+        style={{
+          background: 'rgba(10,14,28,0.65)',
+          backdropFilter: 'blur(12px)',
+          border: '1px solid rgba(255,255,255,0.10)',
+          boxShadow: '0 10px 30px rgba(0,0,0,0.18)',
+        }}
+      >
         <NavLink href="/earth" active={path === '/earth' || path === '/'}>
-          🌍 Globe
+          Globe
         </NavLink>
         <NavLink href="/archive" active={path === '/archive'}>
-          🗂 Archive
+          Archive
         </NavLink>
       </div>
 
-      {/* Right side */}
-      <div className="text-white/40 text-xs hidden sm:block">
-        Explore · Discover · Tour
-      </div>
+      <div className="hidden text-xs text-white/40 sm:block">Explore · Discover · Tour</div>
     </nav>
   )
 }
 
-function NavLink({ href, active, children }: { href: string; active: boolean; children: React.ReactNode }) {
+function NavLink({ href, active, children }: { href: string; active: boolean; children: ReactNode }) {
   return (
     <Link
       href={href}
-      className={`px-4 py-1.5 rounded-full text-sm font-medium transition-all ${
+      className={`rounded-full px-4 py-2 text-sm font-medium transition-all ${
         active
-          ? 'bg-white/15 text-white border border-white/20'
-          : 'text-white/55 hover:text-white/90 hover:bg-white/08'
+          ? 'border border-white/12 bg-white/12 text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.08)]'
+          : 'text-white/55 hover:bg-white/[0.06] hover:text-white/90'
       }`}
       style={active ? { backdropFilter: 'blur(10px)' } : undefined}
     >

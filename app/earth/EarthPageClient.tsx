@@ -1,6 +1,8 @@
 'use client'
 
+import { useState } from 'react'
 import dynamic from 'next/dynamic'
+import ChatInterface from '@/app/components/Chat/ChatInterface'
 import type { Location } from '@/app/components/Earth/types'
 
 const EarthClient = dynamic(() => import('@/app/components/Earth/EarthClient'), {
@@ -21,5 +23,12 @@ interface EarthPageClientProps {
 }
 
 export default function EarthPageClient({ locations, initialLocationId }: EarthPageClientProps) {
-  return <EarthClient locations={locations} initialLocationId={initialLocationId} />
+  const [chatActive, setChatActive] = useState(false)
+
+  return (
+    <>
+      <EarthClient locations={locations} initialLocationId={initialLocationId} chatActive={chatActive} />
+      <ChatInterface onActiveChange={setChatActive} />
+    </>
+  )
 }
