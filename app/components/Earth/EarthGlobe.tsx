@@ -67,6 +67,8 @@ export default function EarthGlobe({ locations, onLocationSelect, initialLocatio
   const targetCameraZRef = useRef(9)
   const touchStartRef = useRef<{ x: number; y: number } | null>(null)
   const pointerRef = useRef<THREE.Vector2 | null>(null)
+  const pointerVecRef = useRef(new THREE.Vector2())
+  const raycasterRef = useRef(new THREE.Raycaster())
   const hoveredPinIdRef = useRef<string | null>(null)
   const locationsRef = useRef(locations)
   const onSelectRef = useRef(onLocationSelect)
@@ -202,7 +204,7 @@ export default function EarthGlobe({ locations, onLocationSelect, initialLocatio
       }
 
       if (modeRef.current === 'country' && pointerRef.current && cameraRef.current) {
-        const raycaster = new THREE.Raycaster()
+        const raycaster = raycasterRef.current
         raycaster.setFromCamera(pointerRef.current, cameraRef.current)
         const meshes = Array.from(pinMeshesRef.current.values())
         const hits = raycaster.intersectObjects(meshes, false)
@@ -343,13 +345,13 @@ export default function EarthGlobe({ locations, onLocationSelect, initialLocatio
       }
 
       const rect = rendererRef.current.domElement.getBoundingClientRect()
-      const mouse = new THREE.Vector2(
+      pointerVecRef.current.set(
         ((e.clientX - rect.left) / rect.width) * 2 - 1,
         -((e.clientY - rect.top) / rect.height) * 2 + 1,
       )
 
-      const raycaster = new THREE.Raycaster()
-      raycaster.setFromCamera(mouse, cameraRef.current)
+      const raycaster = raycasterRef.current
+      raycaster.setFromCamera(pointerVecRef.current, cameraRef.current)
 
       const meshes = Array.from(pinMeshesRef.current.values())
       const hits = raycaster.intersectObjects(meshes, false)
@@ -388,10 +390,11 @@ export default function EarthGlobe({ locations, onLocationSelect, initialLocatio
   const handleMouseMove = useCallback((e: React.MouseEvent) => {
     if (rendererRef.current) {
       const rect = rendererRef.current.domElement.getBoundingClientRect()
-      pointerRef.current = new THREE.Vector2(
+      pointerVecRef.current.set(
         ((e.clientX - rect.left) / rect.width) * 2 - 1,
         -((e.clientY - rect.top) / rect.height) * 2 + 1,
       )
+      pointerRef.current = pointerVecRef.current
     }
 
     if (!isPointerDownRef.current) return
@@ -455,7 +458,7 @@ export default function EarthGlobe({ locations, onLocationSelect, initialLocatio
       <div
         ref={mountRef}
         className="absolute inset-0"
-        style={{ cursor: 'grab' }}
+        style={{ cursor: 'grab', willChange: 'transform' }}
         onClick={handleClick}
         onMouseDown={handleMouseDown}
         onMouseMove={handleMouseMove}

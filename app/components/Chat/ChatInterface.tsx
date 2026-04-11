@@ -3,7 +3,7 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { useChat } from '@ai-sdk/react'
 import { DefaultChatTransport, type UIMessage } from 'ai'
-import { motion } from 'framer-motion'
+import { motion, useMotionTemplate, useMotionValue } from 'framer-motion'
 
 interface ChatInterfaceProps {
   onActiveChange?: (active: boolean) => void
@@ -243,8 +243,10 @@ function ThreadSession({ active, threadId, onActivityChange, onMetaChange }: Thr
 
 export default function ChatInterface({ onActiveChange }: ChatInterfaceProps) {
   const [windowWidth, setWindowWidth] = useState(1280)
-  const [cursorPos, setCursorPos] = useState({ x: 50, y: 50 })
   const [hovered, setHovered] = useState(false)
+  const cursorX = useMotionValue(50)
+  const cursorY = useMotionValue(50)
+  const borderGradient = useMotionTemplate`radial-gradient(circle at ${cursorX}% ${cursorY}%, #ec4899 0%, #818cf8 35%, rgba(200,210,255,0.35) 65%)`
   const [historyOpen, setHistoryOpen] = useState(false)
   const [threads, setThreads] = useState<ThreadMeta[]>([
     { id: createThreadId(), title: 'New thread', updatedAt: Date.now(), messageCount: 0, preview: 'No messages yet' },
@@ -272,11 +274,9 @@ export default function ChatInterface({ onActiveChange }: ChatInterfaceProps) {
 
   const handleMouseMove = useCallback((e: React.MouseEvent<HTMLDivElement>) => {
     const rect = e.currentTarget.getBoundingClientRect()
-    setCursorPos({
-      x: ((e.clientX - rect.left) / rect.width) * 100,
-      y: ((e.clientY - rect.top) / rect.height) * 100,
-    })
-  }, [])
+    cursorX.set(((e.clientX - rect.left) / rect.width) * 100)
+    cursorY.set(((e.clientY - rect.top) / rect.height) * 100)
+  }, [cursorX, cursorY])
 
   const handleActivityChange = useCallback((threadId: string, active: boolean) => {
     setThreadActivity((current) => ({ ...current, [threadId]: active }))
@@ -324,10 +324,6 @@ export default function ChatInterface({ onActiveChange }: ChatInterfaceProps) {
   const idleLeft = Math.max(24, (windowWidth - IDLE_WIDTH) / 2)
   const activeLeft = windowWidth - ACTIVE_WIDTH - 24
 
-  const borderGradient = hovered
-    ? `radial-gradient(circle at ${cursorPos.x}% ${cursorPos.y}%, #ec4899 0%, #818cf8 35%, rgba(200,210,255,0.35) 65%)`
-    : 'rgba(200, 210, 255, 0.25)'
-
   const idleBorderRadius = 28
   const activeBorderRadius = 20
 
@@ -347,7 +343,7 @@ export default function ChatInterface({ onActiveChange }: ChatInterfaceProps) {
         position: 'fixed',
         bottom: 24,
         zIndex: 50,
-        background: borderGradient,
+        background: hovered ? borderGradient : 'rgba(200, 210, 255, 0.25)',
         padding: '1.5px',
       }}
     >

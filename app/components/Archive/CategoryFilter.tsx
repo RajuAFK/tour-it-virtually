@@ -1,14 +1,14 @@
 'use client'
 
 const CATEGORIES = [
-  { id: 'all', label: 'All Places', emoji: '🌏' },
-  { id: 'world heritage', label: 'World Heritage', emoji: '🏛' },
-  { id: 'historical', label: 'Historical', emoji: '🏯' },
-  { id: 'pilgrimages', label: 'Pilgrimages', emoji: '🛕' },
-  { id: 'adventure', label: 'Adventure', emoji: '⛰' },
-  { id: 'get aways', label: 'Get Aways', emoji: '🌴' },
-  { id: 'unexplored', label: 'Unexplored', emoji: '🔭' },
-  { id: 'places of worship', label: 'Places of Worship', emoji: '🕌' },
+  { id: 'all', label: 'All Places', icon: 'All' },
+  { id: 'world heritage', label: 'World Heritage', icon: 'WH' },
+  { id: 'historical', label: 'Historical', icon: 'HI' },
+  { id: 'pilgrimages', label: 'Pilgrimages', icon: 'PI' },
+  { id: 'adventure', label: 'Adventure', icon: 'AD' },
+  { id: 'get aways', label: 'Get Aways', icon: 'GA' },
+  { id: 'unexplored', label: 'Unexplored', icon: 'UN' },
+  { id: 'places of worship', label: 'Places of Worship', icon: 'PW' },
 ]
 
 interface CategoryFilterProps {
@@ -19,26 +19,34 @@ interface CategoryFilterProps {
 
 export default function CategoryFilter({ selected, onChange, counts }: CategoryFilterProps) {
   return (
-    <div className="flex flex-wrap gap-2">
-      {CATEGORIES.map((cat) => {
-        const count = cat.id === 'all' ? Object.values(counts).reduce((a, b) => a + b, 0) : (counts[cat.id] ?? 0)
-        const active = selected === cat.id
+    <div className="flex flex-wrap gap-2.5">
+      {CATEGORIES.map((category) => {
+        const count =
+          category.id === 'all' ? Object.values(counts).reduce((total, value) => total + value, 0) : (counts[category.id] ?? 0)
+        const active = selected === category.id
+
         return (
           <button
-            key={cat.id}
-            onClick={() => onChange(cat.id)}
-            className={`flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium transition-all border ${
+            key={category.id}
+            onClick={() => onChange(category.id)}
+            className={`group flex items-center gap-3 rounded-full border px-4 py-2.5 text-sm font-medium transition-[color,background-color,border-color,box-shadow] duration-150 ${
               active
-                ? 'bg-slate-900 text-white border-slate-900 shadow-md'
-                : 'bg-white text-slate-600 border-slate-200 hover:border-slate-400 hover:text-slate-900 shadow-sm'
+                ? 'border-slate-900 bg-slate-900 text-white shadow-[0_12px_24px_rgba(15,23,42,0.16)]'
+                : 'border-slate-200 bg-white/90 text-slate-600 hover:border-slate-300 hover:bg-white hover:text-slate-900'
             }`}
           >
-            <span>{cat.emoji}</span>
-            <span>{cat.label}</span>
+            <span
+              className={`flex h-7 w-7 items-center justify-center rounded-full text-[0.65rem] font-semibold tracking-[0.14em] ${
+                active ? 'bg-white/12 text-white' : 'bg-slate-100 text-slate-500'
+              }`}
+            >
+              {category.icon}
+            </span>
+            <span>{category.label}</span>
             {count > 0 && (
               <span
-                className={`text-xs px-1.5 py-0.5 rounded-full min-w-[20px] text-center ${
-                  active ? 'bg-white/20 text-white' : 'bg-slate-100 text-slate-500'
+                className={`rounded-full px-2 py-0.5 text-[0.7rem] ${
+                  active ? 'bg-white/12 text-white' : 'bg-slate-100 text-slate-500'
                 }`}
               >
                 {count}
