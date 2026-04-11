@@ -82,14 +82,11 @@ export default function HeroSlider({ locations }: HeroSliderProps) {
               >
                 Enter from globe
               </Link>
-              <a
-                href={location.affiliate.hotel}
-                target="_blank"
-                rel="noopener noreferrer"
+              <button
                 className="rounded-full border border-white/20 bg-white/10 px-5 py-3 text-sm font-medium text-white backdrop-blur-sm transition-colors hover:bg-white/16"
               >
                 Stay nearby
-              </a>
+              </button>
             </div>
           </div>
 

@@ -184,14 +184,11 @@ export default function LocationModal({ location, onClose }: LocationModalProps)
                     </button>
                   )}
 
-                  <a
-                    href={location.affiliate.hotel}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                  <button
                     className="rounded-2xl border border-amber-300/24 bg-amber-400/8 px-5 py-3 text-center text-sm font-medium text-amber-100 transition-colors hover:bg-amber-400/12"
                   >
                     Plan stay nearby
-                  </a>
+                  </button>
                 </div>
               </div>
             </div>

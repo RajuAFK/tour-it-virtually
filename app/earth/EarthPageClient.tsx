@@ -3,7 +3,6 @@
 import { useState } from 'react'
 import dynamic from 'next/dynamic'
 import ChatInterface from '@/app/components/Chat/ChatInterface'
-import EarthLandingPanel from '@/app/components/Earth/EarthLandingPanel'
 import type { Location } from '@/app/components/Earth/types'
 
 const EarthClient = dynamic(() => import('@/app/components/Earth/EarthClient'), {
@@ -29,7 +28,6 @@ export default function EarthPageClient({ locations, initialLocationId }: EarthP
   return (
     <>
       <EarthClient locations={locations} initialLocationId={initialLocationId} chatActive={chatActive} />
-      <EarthLandingPanel locations={locations} chatActive={chatActive} />
       <ChatInterface onActiveChange={setChatActive} />
     </>
   )

@@ -55,14 +55,11 @@ export default function LocationCard({ location }: { location: Location }) {
           >
             Open on globe
           </Link>
-          <a
-            href={location.affiliate.hotel}
-            target="_blank"
-            rel="noopener noreferrer"
+          <button
             className="rounded-full border border-slate-200 px-4 py-2.5 text-sm font-medium text-slate-600 transition-colors hover:border-slate-300 hover:text-slate-900"
           >
             Book stay
-          </a>
+          </button>
         </div>
       </div>
     </article>
